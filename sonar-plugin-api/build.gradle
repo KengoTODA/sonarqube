@@ -54,7 +54,7 @@ processResources {
 }
 
 shadowJar {
-  configurations = [project.configurations.default]
+  configurations = [project.configurations.compileClasspath]
   minimize {
     exclude(project(':sonar-check-api'))
   }

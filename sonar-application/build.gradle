@@ -92,7 +92,7 @@ task downloadElasticSearch(type: Download) {
 
 task zip(type: Zip, dependsOn: [configurations.compile, downloadElasticSearch, verifyElasticSearchDownload]) {
   duplicatesStrategy DuplicatesStrategy.EXCLUDE
-  def archiveDir = "sonarqube-$project.archiveVersion"
+  def archiveDir = "sonarqube-$project.version"
 
   into("${archiveDir}/") {
     from(file('src/main/assembly')) {

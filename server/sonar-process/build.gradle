@@ -24,13 +24,13 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testCompile 'com.google.code.findbugs:jsr305'
-  testCompile 'com.google.protobuf:protobuf-java'
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'junit:junit'
-  testCompile 'org.assertj:assertj-core'
-  testCompile 'org.hamcrest:hamcrest-core'
-  testCompile 'org.mockito:mockito-core'
-  testCompile 'org.awaitility:awaitility'
-  testCompile project(':sonar-testing-harness')
+  testImplementation  'com.google.code.findbugs:jsr305'
+  testImplementation  'com.google.protobuf:protobuf-java'
+  testImplementation  'com.tngtech.java:junit-dataprovider'
+  testImplementation  'junit:junit'
+  testImplementation  'org.assertj:assertj-core'
+  testImplementation  'org.hamcrest:hamcrest-core'
+  testImplementation  'org.mockito:mockito-core'
+  testImplementation  'org.awaitility:awaitility'
+  testImplementation  project(':sonar-testing-harness')
 }

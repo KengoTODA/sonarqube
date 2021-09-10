@@ -55,25 +55,25 @@ dependencies {
   // not a transitive dep. At runtime lib/jdbc/h2 is used
   compileOnly 'com.h2database:h2'
 
-  testCompile 'com.google.code.findbugs:jsr305'
-  testCompile 'com.h2database:h2'
-  testCompile 'com.squareup.okhttp3:mockwebserver'
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'commons-dbutils:commons-dbutils'
-  testCompile 'org.apache.logging.log4j:log4j-api'
-  testCompile 'org.apache.logging.log4j:log4j-core'
-  testCompile 'org.assertj:assertj-core'
-  testCompile 'org.assertj:assertj-guava'
-  testCompile 'org.eclipse.jetty:jetty-server'
-  testCompile 'org.eclipse.jetty:jetty-servlet'
-  testCompile 'org.hamcrest:hamcrest-all'
-  testCompile 'org.mockito:mockito-core'
-  testCompile 'org.subethamail:subethasmtp'
-  testCompile testFixtures(project(':server:sonar-server-common'))
-  testCompile testFixtures(project(':server:sonar-webserver-auth'))
-  testCompile testFixtures(project(':server:sonar-webserver-es'))
-  testCompile testFixtures(project(':server:sonar-webserver-ws'))
-  testCompile project(':sonar-testing-harness')
+  testImplementation  'com.google.code.findbugs:jsr305'
+  testImplementation  'com.h2database:h2'
+  testImplementation  'com.squareup.okhttp3:mockwebserver'
+  testImplementation  'com.tngtech.java:junit-dataprovider'
+  testImplementation  'commons-dbutils:commons-dbutils'
+  testImplementation  'org.apache.logging.log4j:log4j-api'
+  testImplementation  'org.apache.logging.log4j:log4j-core'
+  testImplementation  'org.assertj:assertj-core'
+  testImplementation  'org.assertj:assertj-guava'
+  testImplementation  'org.eclipse.jetty:jetty-server'
+  testImplementation  'org.eclipse.jetty:jetty-servlet'
+  testImplementation  'org.hamcrest:hamcrest-all'
+  testImplementation  'org.mockito:mockito-core'
+  testImplementation  'org.subethamail:subethasmtp'
+  testImplementation  testFixtures(project(':server:sonar-server-common'))
+  testImplementation  testFixtures(project(':server:sonar-webserver-auth'))
+  testImplementation  testFixtures(project(':server:sonar-webserver-es'))
+  testImplementation  testFixtures(project(':server:sonar-webserver-ws'))
+  testImplementation  project(':sonar-testing-harness')
 
   runtimeOnly 'io.jsonwebtoken:jjwt-jackson'
 }

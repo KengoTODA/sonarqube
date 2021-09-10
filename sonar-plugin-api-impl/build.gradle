@@ -21,11 +21,11 @@ dependencies {
 
   testCompileOnly 'com.google.code.findbugs:jsr305'
 
-  testCompile 'com.google.guava:guava'
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'junit:junit'
-  testCompile 'org.assertj:assertj-core'
-  testCompile 'org.mockito:mockito-core'
+  testImplementation  'com.google.guava:guava'
+  testImplementation  'com.tngtech.java:junit-dataprovider'
+  testImplementation  'junit:junit'
+  testImplementation  'org.assertj:assertj-core'
+  testImplementation  'org.mockito:mockito-core'
 }
 
 artifactoryPublish.skip = false

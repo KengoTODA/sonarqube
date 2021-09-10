@@ -75,5 +75,5 @@ dependencies {
   testCompile testFixtures(project(':server:sonar-webserver-ws'))
   testCompile project(':sonar-testing-harness')
 
-  runtime 'io.jsonwebtoken:jjwt-jackson'
+  runtimeOnly 'io.jsonwebtoken:jjwt-jackson'
 }

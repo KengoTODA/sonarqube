@@ -33,7 +33,7 @@ dependencies {
 
   testCompileOnly  'com.google.code.findbugs:jsr305'
 
-  runtime 'io.jsonwebtoken:jjwt-jackson'
+  runtimeOnly 'io.jsonwebtoken:jjwt-jackson'
 
   testFixturesApi 'junit:junit'
 

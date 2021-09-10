@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 sonarqube {
   properties {
     property 'sonar.projectName', "${projectTitle} :: Markdown"
@@ -9,8 +11,8 @@ configureCompileJavaToVersion 8
 dependencies {
   // please keep list ordered
 
-  compile 'commons-lang:commons-lang'
-  compile 'org.codehaus.sonar:sonar-channel'
+  implementation 'commons-lang:commons-lang'
+  api 'org.codehaus.sonar:sonar-channel'
 
   testImplementation 'ch.qos.logback:logback-classic'
   testImplementation 'junit:junit'

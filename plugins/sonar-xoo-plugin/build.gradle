@@ -1,14 +1,14 @@
 configurations {
-  testImplementation .extendsFrom(compileOnly)
+  testImplementation.extendsFrom(compileOnly)
 }
 
 configureCompileJavaToVersion 8
 
 dependencies {
-  compile 'com.google.guava:guava'
-  compile 'commons-io:commons-io'
-  compile 'commons-lang:commons-lang'
-  compile 'org.apache.commons:commons-csv'
+  implementation 'com.google.guava:guava'
+  implementation 'commons-io:commons-io'
+  implementation 'commons-lang:commons-lang'
+  implementation 'org.apache.commons:commons-csv'
   compileOnly project(path: ':sonar-plugin-api', configuration: 'shadow')
   compileOnly 'com.google.code.findbugs:jsr305'
 

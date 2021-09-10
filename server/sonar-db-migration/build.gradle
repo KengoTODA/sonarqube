@@ -19,19 +19,19 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testImplementation  'com.google.code.findbugs:jsr305'
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'commons-dbutils:commons-dbutils'
-  testImplementation  'com.squareup.okhttp3:mockwebserver'
-  testImplementation  'junit:junit'
-  testImplementation  'org.assertj:assertj-core'
-  testImplementation  'org.mindrot:jbcrypt'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  'org.xmlunit:xmlunit-core'
-  testImplementation  'org.xmlunit:xmlunit-matchers'
-  testImplementation  project(':sonar-scanner-protocol')
-  testImplementation  project(':sonar-testing-harness')
-  testImplementation  testFixtures(project(':server:sonar-db-core'))
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'commons-dbutils:commons-dbutils'
+  testImplementation 'com.squareup.okhttp3:mockwebserver'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'org.mindrot:jbcrypt'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.xmlunit:xmlunit-core'
+  testImplementation 'org.xmlunit:xmlunit-matchers'
+  testImplementation project(':sonar-scanner-protocol')
+  testImplementation project(':sonar-testing-harness')
+  testImplementation testFixtures(project(':server:sonar-db-core'))
 
   testRuntimeOnly 'com.h2database:h2'
   testRuntimeOnly 'com.microsoft.sqlserver:mssql-jdbc'

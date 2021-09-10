@@ -22,15 +22,15 @@ dependencies {
   compileOnly 'javax.annotation:javax.annotation-api'
   compileOnly project(path: ':sonar-plugin-api', configuration: 'shadow')
 
-  testImplementation  'com.squareup.okhttp3:mockwebserver'
-  testImplementation  'com.squareup.okio:okio'
-  testImplementation  'commons-io:commons-io'
-  testImplementation  'commons-lang:commons-lang'
-  testImplementation  'junit:junit'
-  testImplementation  'org.assertj:assertj-core'
-  testImplementation  'org.hamcrest:hamcrest-core'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  project(':sonar-testing-harness')
+  testImplementation 'com.squareup.okhttp3:mockwebserver'
+  testImplementation 'com.squareup.okio:okio'
+  testImplementation 'commons-io:commons-io'
+  testImplementation 'commons-lang:commons-lang'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'org.hamcrest:hamcrest-core'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation project(':sonar-testing-harness')
 }
 
 artifactoryPublish.skip = false

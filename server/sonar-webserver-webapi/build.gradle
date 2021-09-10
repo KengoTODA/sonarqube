@@ -23,18 +23,18 @@ dependencies {
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'
 
-  testImplementation  'org.apache.logging.log4j:log4j-api'
-  testImplementation  'org.apache.logging.log4j:log4j-core'
-  testImplementation  'org.assertj:assertj-guava'
-  testImplementation  'com.google.code.findbugs:jsr305'
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'com.squareup.okhttp3:mockwebserver'
-  testImplementation  'javax.servlet:javax.servlet-api'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  testFixtures(project(':server:sonar-server-common'))
-  testImplementation  testFixtures(project(':server:sonar-webserver-auth'))
-  testImplementation  testFixtures(project(':server:sonar-webserver-es'))
-  testImplementation  testFixtures(project(':server:sonar-webserver-ws'))
-  testImplementation  project(':sonar-testing-harness')
+  testImplementation 'org.apache.logging.log4j:log4j-api'
+  testImplementation 'org.apache.logging.log4j:log4j-core'
+  testImplementation 'org.assertj:assertj-guava'
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'com.squareup.okhttp3:mockwebserver'
+  testImplementation 'javax.servlet:javax.servlet-api'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation testFixtures(project(':server:sonar-server-common'))
+  testImplementation testFixtures(project(':server:sonar-webserver-auth'))
+  testImplementation testFixtures(project(':server:sonar-webserver-es'))
+  testImplementation testFixtures(project(':server:sonar-webserver-ws'))
+  testImplementation project(':sonar-testing-harness')
 }
 

@@ -20,9 +20,9 @@ dependencies {
     compileOnly project(':server:sonar-db-dao')
     compileOnly project(':sonar-core')
 
-    testImplementation  'com.tngtech.java:junit-dataprovider'
-    testImplementation  'junit:junit'
-    testImplementation  'org.assertj:assertj-core'
-    testImplementation  'org.mockito:mockito-core'
-    testImplementation  testFixtures(project(':server:sonar-db-dao'))
+    testImplementation 'com.tngtech.java:junit-dataprovider'
+    testImplementation 'junit:junit'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation testFixtures(project(':server:sonar-db-dao'))
 }

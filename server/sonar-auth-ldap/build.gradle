@@ -13,10 +13,10 @@ dependencies {
     compileOnly 'javax.servlet:javax.servlet-api'
     compileOnly project(':sonar-core')
 
-    testImplementation  'com.tngtech.java:junit-dataprovider'
-    testImplementation  'junit:junit'
-    testImplementation  'org.assertj:assertj-core'
-    testImplementation  'org.mockito:mockito-core'
-    testImplementation  project(":sonar-testing-ldap")
+    testImplementation 'com.tngtech.java:junit-dataprovider'
+    testImplementation 'junit:junit'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation project(":sonar-testing-ldap")
 
 }

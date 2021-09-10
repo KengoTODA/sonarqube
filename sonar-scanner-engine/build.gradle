@@ -45,18 +45,18 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testImplementation  'com.squareup.okhttp3:mockwebserver'
-  testImplementation  'com.squareup.okhttp3:okhttp'
-  testImplementation  'com.squareup.okio:okio'
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'commons-io:commons-io'
-  testImplementation  'junit:junit'
-  testImplementation  'org.assertj:assertj-core'
-  testImplementation  'com.fasterxml.staxmate:staxmate'
-  testImplementation  'org.hamcrest:hamcrest-core'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  project(':plugins:sonar-xoo-plugin')
-  testImplementation  project(':sonar-plugin-api').sourceSets.test.output
+  testImplementation 'com.squareup.okhttp3:mockwebserver'
+  testImplementation 'com.squareup.okhttp3:okhttp'
+  testImplementation 'com.squareup.okio:okio'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'commons-io:commons-io'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'com.fasterxml.staxmate:staxmate'
+  testImplementation 'org.hamcrest:hamcrest-core'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation project(':plugins:sonar-xoo-plugin')
+  testImplementation project(':sonar-plugin-api').sourceSets.test.output
 
 }
 

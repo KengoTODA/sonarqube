@@ -9,7 +9,7 @@ dependencies {
     compile 'org.apache.directory.server:apacheds-all:2.0.0-M24'
     compile 'org.slf4j:slf4j-api'
 
-    testImplementation  'org.assertj:assertj-core'
-    testImplementation  'org.hamcrest:hamcrest-core'
-    testImplementation  'org.mockito:mockito-core'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.hamcrest:hamcrest-core'
+    testImplementation 'org.mockito:mockito-core'
 }

@@ -29,14 +29,14 @@ dependencies {
   
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testImplementation  'com.google.code.findbugs:jsr305'
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'junit:junit'
-  testImplementation  'org.assertj:assertj-core'
-  testImplementation  'org.awaitility:awaitility'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  'org.slf4j:slf4j-api'
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'org.awaitility:awaitility'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.slf4j:slf4j-api'
   
-  testImplementation  testFixtures(project(':server:sonar-db-dao'))
+  testImplementation testFixtures(project(':server:sonar-db-dao'))
 
 }

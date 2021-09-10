@@ -25,13 +25,13 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'junit:junit'
-  testImplementation  'org.assertj:assertj-core'
-  testImplementation  'org.hamcrest:hamcrest-core'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  'org.simpleframework:simple'
-  testImplementation  project(':sonar-testing-harness')
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'org.hamcrest:hamcrest-core'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.simpleframework:simple'
+  testImplementation project(':sonar-testing-harness')
 
   testCompileOnly 'com.google.code.findbugs:jsr305'
 }

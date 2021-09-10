@@ -20,10 +20,10 @@ dependencies {
   compileOnly 'javax.servlet:javax.servlet-api'
   compileOnly 'org.apache.tomcat.embed:tomcat-embed-core'
 
-  testImplementation  'com.google.code.findbugs:jsr305'
-  testImplementation  'javax.servlet:javax.servlet-api'
-  testImplementation  'org.apache.tomcat.embed:tomcat-embed-core'
-  testImplementation  'org.mockito:mockito-core'
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'javax.servlet:javax.servlet-api'
+  testImplementation 'org.apache.tomcat.embed:tomcat-embed-core'
+  testImplementation 'org.mockito:mockito-core'
 
   testFixturesApi project(':sonar-testing-harness')
 

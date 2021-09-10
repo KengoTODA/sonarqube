@@ -11,13 +11,13 @@ dependencies {
     compile 'com.auth0:java-jwt'
     compile 'org.bouncycastle:bcpkix-jdk15on:1.64'
 
-    testImplementation  project(':sonar-plugin-api-impl')
+    testImplementation project(':sonar-plugin-api-impl')
 
-    testImplementation  'junit:junit'
-    testImplementation  'com.tngtech.java:junit-dataprovider'
-    testImplementation  'org.assertj:assertj-core'
-    testImplementation  'org.assertj:assertj-guava'
-    testImplementation  'org.mockito:mockito-core'
-    testImplementation  'com.squareup.okhttp3:mockwebserver'
+    testImplementation 'junit:junit'
+    testImplementation 'com.tngtech.java:junit-dataprovider'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.assertj:assertj-guava'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'com.squareup.okhttp3:mockwebserver'
 
 }

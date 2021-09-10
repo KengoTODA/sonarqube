@@ -30,13 +30,13 @@ dependencies {
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'
 
-  testImplementation  'org.assertj:assertj-guava'
-  testImplementation  'com.google.code.findbugs:jsr305'
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'javax.servlet:javax.servlet-api'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  testFixtures(project(':server:sonar-server-common'))
-  testImplementation  project(':sonar-testing-harness')
+  testImplementation 'org.assertj:assertj-guava'
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'javax.servlet:javax.servlet-api'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation testFixtures(project(':server:sonar-server-common'))
+  testImplementation project(':sonar-testing-harness')
 
   testFixturesApi 'junit:junit'
 

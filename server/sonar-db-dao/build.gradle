@@ -21,15 +21,15 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testImplementation  'com.tngtech.java:junit-dataprovider'
-  testImplementation  'commons-dbutils:commons-dbutils'
-  testImplementation  'junit:junit'
-  testImplementation  'org.assertj:assertj-core'
-  testImplementation  'org.assertj:assertj-guava'
-  testImplementation  'org.mockito:mockito-core'
-  testImplementation  'org.sonarsource.orchestrator:sonar-orchestrator'
-  testImplementation  project(':sonar-testing-harness')
-  testImplementation  project(':sonar-plugin-api-impl')
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'commons-dbutils:commons-dbutils'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'org.assertj:assertj-guava'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.sonarsource.orchestrator:sonar-orchestrator'
+  testImplementation project(':sonar-testing-harness')
+  testImplementation project(':sonar-plugin-api-impl')
 
   testCompileOnly 'com.google.code.findbugs:jsr305'
 

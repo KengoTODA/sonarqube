@@ -165,7 +165,7 @@ task zip(type: Zip, dependsOn: [configurations.compile, downloadElasticSearch, v
   into("${archiveDir}/conf/") {
     from file('src/main/assembly/conf/wrapper.conf')
     filter(ReplaceTokens, tokens: [
-            'sqversion': archiveVersion
+            'sqversion': project.version
     ])
   }
   

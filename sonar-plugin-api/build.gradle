@@ -35,8 +35,8 @@ dependencies {
 
 sourceSets {
   // Make the compileOnly dependencies available when compiling/running tests
-  test.compileClasspath += configurations.compileOnly + configurations.shadow
-  test.runtimeClasspath += configurations.compileOnly + configurations.shadow
+  test.compileClasspath += configurations.compileClasspath + configurations.shadow
+  test.runtimeClasspath += configurations.compileClasspath + configurations.shadow
 }
 
 def on3Digits(version) {

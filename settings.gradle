@@ -10,6 +10,10 @@ pluginManagement {
   }
 }
 
+plugins {
+  id "com.gradle.enterprise" version "3.6.4"
+}
+
 rootProject.name = 'sonarqube'
 
 include 'plugins:sonar-xoo-plugin'

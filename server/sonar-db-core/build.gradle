@@ -22,14 +22,14 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testCompile 'com.google.code.findbugs:jsr305'
-  testCompile 'com.h2database:h2'
-  testCompile 'com.microsoft.sqlserver:mssql-jdbc'
-  testCompile 'com.oracle.database.jdbc:ojdbc8'
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'org.mockito:mockito-core'
-  testCompile 'org.postgresql:postgresql'
-  testCompile project(':sonar-testing-harness')
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'com.h2database:h2'
+  testImplementation 'com.microsoft.sqlserver:mssql-jdbc'
+  testImplementation 'com.oracle.database.jdbc:ojdbc8'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.postgresql:postgresql'
+  testImplementation project(':sonar-testing-harness')
 
   testRuntimeOnly 'com.h2database:h2'
   testRuntimeOnly 'com.microsoft.sqlserver:mssql-jdbc'

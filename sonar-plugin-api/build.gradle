@@ -26,11 +26,11 @@ dependencies {
   compileOnly 'org.junit.jupiter:junit-jupiter-api'
   compileOnly 'org.slf4j:slf4j-api'
 
-  testCompile 'com.google.guava:guava'
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'org.assertj:assertj-core'
-  testCompile 'org.mockito:mockito-core'
-  testCompile project(':sonar-plugin-api-impl')
+  testImplementation 'com.google.guava:guava'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation project(':sonar-plugin-api-impl')
 }
 
 sourceSets {

@@ -17,9 +17,9 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testCompile 'com.google.guava:guava'
-  testCompile 'junit:junit'
-  testCompile 'org.assertj:assertj-core'
+  testImplementation 'com.google.guava:guava'
+  testImplementation 'junit:junit'
+  testImplementation 'org.assertj:assertj-core'
 }
 
 //create a single Jar with all dependencies

@@ -23,15 +23,15 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
 
-  testCompile 'org.apache.logging.log4j:log4j-api'
-  testCompile 'org.apache.logging.log4j:log4j-core'
-  testCompile 'com.google.code.findbugs:jsr305'
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'org.mockito:mockito-core'
-  testCompile 'org.eclipse.jetty:jetty-server'
-  testCompile 'org.eclipse.jetty:jetty-servlet'
-  testCompile testFixtures(project(':server:sonar-server-common'))
-  testCompile testFixtures(project(':server:sonar-webserver-auth'))
-  testCompile testFixtures(project(':server:sonar-webserver-es'))
-  testCompile project(':sonar-testing-harness')
+  testImplementation 'org.apache.logging.log4j:log4j-api'
+  testImplementation 'org.apache.logging.log4j:log4j-core'
+  testImplementation 'com.google.code.findbugs:jsr305'
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.eclipse.jetty:jetty-server'
+  testImplementation 'org.eclipse.jetty:jetty-servlet'
+  testImplementation testFixtures(project(':server:sonar-server-common'))
+  testImplementation testFixtures(project(':server:sonar-webserver-auth'))
+  testImplementation testFixtures(project(':server:sonar-webserver-es'))
+  testImplementation project(':sonar-testing-harness')
 }

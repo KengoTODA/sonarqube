@@ -22,14 +22,14 @@ dependencies {
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'
 
-  testCompile 'com.tngtech.java:junit-dataprovider'
-  testCompile 'javax.servlet:javax.servlet-api'
-  testCompile 'org.apache.logging.log4j:log4j-api'
-  testCompile 'org.apache.logging.log4j:log4j-core'
-  testCompile 'org.assertj:assertj-guava'
-  testCompile 'org.mockito:mockito-core'
-  testCompile testFixtures(project(':server:sonar-server-common'))
-  testCompile project(':sonar-testing-harness')
+  testImplementation 'com.tngtech.java:junit-dataprovider'
+  testImplementation 'javax.servlet:javax.servlet-api'
+  testImplementation 'org.apache.logging.log4j:log4j-api'
+  testImplementation 'org.apache.logging.log4j:log4j-core'
+  testImplementation 'org.assertj:assertj-guava'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation testFixtures(project(':server:sonar-server-common'))
+  testImplementation project(':sonar-testing-harness')
 
   testCompileOnly  'com.google.code.findbugs:jsr305'
 

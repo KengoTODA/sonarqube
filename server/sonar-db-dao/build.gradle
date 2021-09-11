@@ -33,10 +33,10 @@ dependencies {
 
   testCompileOnly 'com.google.code.findbugs:jsr305'
 
-  testRuntime 'com.h2database:h2'
-  testRuntime 'com.microsoft.sqlserver:mssql-jdbc'
-  testRuntime 'com.oracle.database.jdbc:ojdbc8'
-  testRuntime 'org.postgresql:postgresql'
+  testRuntimeOnly 'com.h2database:h2'
+  testRuntimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+  testRuntimeOnly 'com.oracle.database.jdbc:ojdbc8'
+  testRuntimeOnly 'org.postgresql:postgresql'
 
   testFixturesApi testFixtures(project(':server:sonar-db-core'))
 

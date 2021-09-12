@@ -17,4 +17,4 @@ jobs:
           java-version: 11
           distribution: temurin
       - run: |
-          ./gradlew build --no-daemon --scan
+          ./gradlew build --no-daemon --scan -PparallelTests=true

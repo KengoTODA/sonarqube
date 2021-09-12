@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'SonarQube WebServer-only code'
 
 sonarqube {
@@ -18,38 +20,38 @@ processResources {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'ch.qos.logback:logback-access'
-  compile 'ch.qos.logback:logback-classic'
-  compile 'ch.qos.logback:logback-core'
-  compile 'com.google.code.gson:gson'
-  compile 'com.google.protobuf:protobuf-java'
-  compile 'io.jsonwebtoken:jjwt-api'
-  compile 'io.jsonwebtoken:jjwt-impl'
-  compile 'org.apache.httpcomponents:httpclient'
-  compile 'org.apache.logging.log4j:log4j-api'
-  compile 'org.apache.tomcat.embed:tomcat-embed-core'
-  compile 'org.apache.commons:commons-dbcp2'
-  compile 'org.picocontainer:picocontainer'
-  compile 'org.slf4j:jul-to-slf4j'
-  compile 'org.slf4j:slf4j-api'
-  compile 'org.sonarsource.update-center:sonar-update-center-common'
-  compile 'org.mindrot:jbcrypt'
+  api 'ch.qos.logback:logback-access'
+  api 'ch.qos.logback:logback-classic'
+  api 'ch.qos.logback:logback-core'
+  api 'com.google.code.gson:gson'
+  api 'com.google.protobuf:protobuf-java'
+  api 'io.jsonwebtoken:jjwt-api'
+  api 'io.jsonwebtoken:jjwt-impl'
+  api 'org.apache.httpcomponents:httpclient'
+  api 'org.apache.logging.log4j:log4j-api'
+  api 'org.apache.tomcat.embed:tomcat-embed-core'
+  api 'org.apache.commons:commons-dbcp2'
+  api 'org.picocontainer:picocontainer'
+  api 'org.slf4j:jul-to-slf4j'
+  api 'org.slf4j:slf4j-api'
+  api 'org.sonarsource.update-center:sonar-update-center-common'
+  api 'org.mindrot:jbcrypt'
 
-  compile project(':server:sonar-ce-common')
-  compile project(':server:sonar-ce-task')
-  compile project(':server:sonar-ce-task-projectanalysis')
-  compile project(':server:sonar-db-migration')
-  compile project(':server:sonar-process')
-  compile project(':server:sonar-server-common')
-  compile project(':server:sonar-webserver-api')
-  compile project(':server:sonar-webserver-es')
-  compile project(':sonar-core')
-  compile project(':sonar-duplications')
-  compile project(':sonar-scanner-protocol')
-  compile project(':sonar-markdown')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-  compile project(':sonar-plugin-api-impl')
-  compile project(':sonar-ws')
+  api project(':server:sonar-ce-common')
+  api project(':server:sonar-ce-task')
+  api project(':server:sonar-ce-task-projectanalysis')
+  api project(':server:sonar-db-migration')
+  api project(':server:sonar-process')
+  api project(':server:sonar-server-common')
+  api project(':server:sonar-webserver-api')
+  api project(':server:sonar-webserver-es')
+  api project(':sonar-core')
+  api project(':sonar-duplications')
+  api project(':sonar-scanner-protocol')
+  api project(':sonar-markdown')
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
+  api project(':sonar-plugin-api-impl')
+  api project(':sonar-ws')
 
   compileOnly 'com.google.code.findbugs:jsr305'
   // not a transitive dep. At runtime lib/jdbc/h2 is used

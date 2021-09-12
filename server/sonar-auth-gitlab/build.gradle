@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'SonarQube :: Authentication :: GitLab'
 
 configurations {
@@ -7,10 +9,10 @@ configurations {
 dependencies {
     // please keep the list ordered
 
-    compile 'com.github.scribejava:scribejava-apis'
-    compile 'com.github.scribejava:scribejava-core'
-    compile 'com.google.code.gson:gson'
-    compile project(':server:sonar-auth-common')
+    api 'com.github.scribejava:scribejava-apis'
+    api 'com.github.scribejava:scribejava-core'
+    api 'com.google.code.gson:gson'
+    api project(':server:sonar-auth-common')
 
     compileOnly 'com.google.code.findbugs:jsr305'
     compileOnly 'com.squareup.okhttp3:okhttp'

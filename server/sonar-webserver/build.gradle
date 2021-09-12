@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'SonarQube WebServer executable and Tomcat directly related code'
 
 sonarqube {
@@ -9,17 +11,17 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile 'org.apache.tomcat.embed:tomcat-embed-core'
-  compile project(':sonar-core')
-  compile project(':server:sonar-auth-github')
-  compile project(':server:sonar-auth-gitlab')
-  compile project(':server:sonar-auth-ldap')
-  compile project(':server:sonar-auth-saml')
-  compile project(':server:sonar-ce-task-projectanalysis')
-  compile project(':server:sonar-process')
-  compile project(':server:sonar-webserver-core')
-  compile project(':server:sonar-webserver-webapi')
+  api 'com.google.guava:guava'
+  api 'org.apache.tomcat.embed:tomcat-embed-core'
+  api project(':sonar-core')
+  api project(':server:sonar-auth-github')
+  api project(':server:sonar-auth-gitlab')
+  api project(':server:sonar-auth-ldap')
+  api project(':server:sonar-auth-saml')
+  api project(':server:sonar-ce-task-projectanalysis')
+  api project(':server:sonar-process')
+  api project(':server:sonar-webserver-core')
+  api project(':server:sonar-webserver-webapi')
 
   compileOnly 'com.google.code.findbugs:jsr305'
 

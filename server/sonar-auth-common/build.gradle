@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'SonarQube :: Authentication :: Common'
 
 configurations {
@@ -7,8 +9,8 @@ configurations {
 dependencies {
     // please keep the list ordered
 
-    compile 'com.github.scribejava:scribejava-apis'
-    compile 'com.github.scribejava:scribejava-core'
+    api 'com.github.scribejava:scribejava-apis'
+    api 'com.github.scribejava:scribejava-core'
 
     compileOnly 'com.google.code.findbugs:jsr305'
 

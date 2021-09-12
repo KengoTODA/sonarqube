@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 sonarqube {
   skipProject = true
 }
@@ -5,15 +7,15 @@ sonarqube {
 dependencies {
   // please keep list ordered
 
-  compile 'com.google.code.gson:gson'
-  compile 'com.google.guava:guava'
-  compile 'commons-io:commons-io'
+  api 'com.google.code.gson:gson'
+  api 'com.google.guava:guava'
+  api 'commons-io:commons-io'
   // transitive dependency of Velocity that must be upgraded
   // in order to fix a vulnerability
-  compile 'commons-collections:commons-collections:3.2.2'
-  compile 'org.apache.velocity:velocity:1.7'
-  compile 'org.slf4j:log4j-over-slf4j'
-  compile 'org.sonarsource.orchestrator:sonar-orchestrator'
+  api 'commons-collections:commons-collections:3.2.2'
+  api 'org.apache.velocity:velocity:1.7'
+  api 'org.slf4j:log4j-over-slf4j'
+  api 'org.sonarsource.orchestrator:sonar-orchestrator'
 
   compileOnly 'com.google.code.findbugs:jsr305'
 }

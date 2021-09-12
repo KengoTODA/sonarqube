@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'WebServer "API" to write Web Services'
 
 sonarqube {
@@ -9,12 +11,12 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile project(':sonar-core')
-  compile project(':server:sonar-webserver-api')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-  compile project(':sonar-plugin-api-impl')
-  compile project(':sonar-ws')
+  api 'com.google.guava:guava'
+  api project(':sonar-core')
+  api project(':server:sonar-webserver-api')
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
+  api project(':sonar-plugin-api-impl')
+  api project(':sonar-ws')
 
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'

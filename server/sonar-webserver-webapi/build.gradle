@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 sonarqube {
   properties {
     property 'sonar.projectName', "${projectTitle} :: WebServer :: WebAPI"
@@ -7,17 +9,17 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile 'com.github.everit-org.json-schema:org.everit.json.schema'
-  compile project(':server:sonar-ce-common')
-  compile project(':server:sonar-ce-task')
-  compile project(':server:sonar-db-dao')
-  compile project(':server:sonar-process')
-  compile project(':server:sonar-webserver-auth')
-  compile project(':server:sonar-webserver-es')
-  compile project(':server:sonar-webserver-ws')
-  compile project(':server:sonar-alm-client')
-  compile project(':sonar-scanner-protocol')
+  api 'com.google.guava:guava'
+  api 'com.github.everit-org.json-schema:org.everit.json.schema'
+  api project(':server:sonar-ce-common')
+  api project(':server:sonar-ce-task')
+  api project(':server:sonar-db-dao')
+  api project(':server:sonar-process')
+  api project(':server:sonar-webserver-auth')
+  api project(':server:sonar-webserver-es')
+  api project(':server:sonar-webserver-ws')
+  api project(':server:sonar-alm-client')
+  api project(':sonar-scanner-protocol')
 
 
   compileOnly 'com.google.code.findbugs:jsr305'

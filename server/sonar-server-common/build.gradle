@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'Code shared between the Web Server and the Compute Engine'
 
 sonarqube {
@@ -9,20 +11,20 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'org.apache.commons:commons-email'
-  compile 'commons-io:commons-io'
-  compile 'commons-lang:commons-lang'
-  compile 'com.google.guava:guava'
-  compile 'org.slf4j:slf4j-api'
-  compile 'com.squareup.okhttp3:okhttp'
-  compile 'org.elasticsearch.client:elasticsearch-rest-high-level-client'
-  compile project(':server:sonar-db-dao')
-  compile project(':server:sonar-db-migration')
-  compile project(':server:sonar-process')
-  compile project(':sonar-core')
-  compile project(':sonar-markdown')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-  compile project(':sonar-ws')
+  api 'org.apache.commons:commons-email'
+  api 'commons-io:commons-io'
+  api 'commons-lang:commons-lang'
+  api 'com.google.guava:guava'
+  api 'org.slf4j:slf4j-api'
+  api 'com.squareup.okhttp3:okhttp'
+  api 'org.elasticsearch.client:elasticsearch-rest-high-level-client'
+  api project(':server:sonar-db-dao')
+  api project(':server:sonar-db-migration')
+  api project(':server:sonar-process')
+  api project(':sonar-core')
+  api project(':sonar-markdown')
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
+  api project(':sonar-ws')
 
   compileOnly 'com.google.code.findbugs:jsr305'
 

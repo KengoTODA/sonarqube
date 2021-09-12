@@ -1,3 +1,5 @@
+apply plugin: 'java-library'
+
 description = 'SonarQube WebServer internal APIs, used by other Web Server modules or Core Extensions'
 
 sonarqube {
@@ -17,15 +19,15 @@ sourceSets {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile 'io.jsonwebtoken:jjwt-api'
-  compile 'io.jsonwebtoken:jjwt-impl'
-  compile project(':sonar-core')
-  compile project(':server:sonar-process')
-  compile project(':server:sonar-server-common')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-  compile project(':sonar-plugin-api-impl')
-  compile 'org.mindrot:jbcrypt'
+  api 'com.google.guava:guava'
+  api 'io.jsonwebtoken:jjwt-api'
+  api 'io.jsonwebtoken:jjwt-impl'
+  api project(':sonar-core')
+  api project(':server:sonar-process')
+  api project(':server:sonar-server-common')
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
+  api project(':sonar-plugin-api-impl')
+  api 'org.mindrot:jbcrypt'
 
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'

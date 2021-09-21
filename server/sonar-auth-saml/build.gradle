@@ -25,4 +25,5 @@ dependencies {
     testImplementation 'org.assertj:assertj-core'
     testImplementation 'org.mockito:mockito-core'
     testImplementation testFixtures(project(':server:sonar-db-dao'))
+    testImplementation project(':sonar-plugin-api-impl')
 }

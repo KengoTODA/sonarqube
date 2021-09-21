@@ -18,5 +18,6 @@ dependencies {
     testImplementation 'org.assertj:assertj-core'
     testImplementation 'org.mockito:mockito-core'
     testImplementation project(":sonar-testing-ldap")
+    testImplementation project(':sonar-plugin-api-impl')
 
 }

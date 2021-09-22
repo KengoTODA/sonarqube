@@ -1,14 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
 description = 'SonarQube :: Authentication :: Common'
 
 configurations {
-    testImplementation .extendsFrom compileOnly
+    testImplementation.extendsFrom compileOnly
 }
 
 dependencies {
     // please keep the list ordered
 
-    compile 'com.github.scribejava:scribejava-apis'
-    compile 'com.github.scribejava:scribejava-core'
+    implementation 'com.github.scribejava:scribejava-apis' // no class is used in this project
+    api 'com.github.scribejava:scribejava-core'
 
     compileOnly 'com.google.code.findbugs:jsr305'
 

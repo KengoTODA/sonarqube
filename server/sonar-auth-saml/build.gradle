@@ -1,7 +1,11 @@
+plugins {
+    id 'java-library'
+}
+
 description = 'SonarQube :: Authentication :: SAML'
 
 configurations {
-    testImplementation .extendsFrom compileOnly
+    testImplementation.extendsFrom compileOnly
 }
 
 ext {
@@ -11,8 +15,8 @@ ext {
 dependencies {
     // please keep the list ordered
 
-    compile "com.onelogin:java-saml:${oneLoginVersion}"
-    compile "com.onelogin:java-saml-core:${oneLoginVersion}"
+    api "com.onelogin:java-saml:${oneLoginVersion}"
+    api "com.onelogin:java-saml-core:${oneLoginVersion}"
 
     compileOnly 'com.google.code.findbugs:jsr305'
     compileOnly 'com.squareup.okhttp3:okhttp'

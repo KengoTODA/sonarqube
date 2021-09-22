@@ -1,13 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
 description = 'SonarQube :: Authentication :: LDAP'
 
 configurations {
-    testImplementation .extendsFrom compileOnly
+    testImplementation.extendsFrom compileOnly
 }
 
 dependencies {
     // please keep the list ordered
 
-    compile 'commons-lang:commons-lang'
+    implementation 'commons-lang:commons-lang'
 
     compileOnly 'com.google.code.findbugs:jsr305'
     compileOnly 'javax.servlet:javax.servlet-api'

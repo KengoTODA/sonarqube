@@ -1,3 +1,7 @@
+plugins {
+  id 'java-library'
+}
+
 sonarqube {
   properties {
     property 'sonar.projectName', "${projectTitle} :: Scanner Engine"
@@ -10,38 +14,38 @@ sourceSets.test.resources {
 }
 
 configurations {
-  testImplementation .extendsFrom(compileOnly)
+  testImplementation.extendsFrom(compileOnly)
 }
 
 dependencies {
   // please keep the list ordered
 
-  compile 'ch.qos.logback:logback-classic'
-  compile 'ch.qos.logback:logback-core'
-  compile 'commons-codec:commons-codec'
-  compile 'commons-io:commons-io'
-  compile 'commons-lang:commons-lang'
-  compile 'com.google.code.gson:gson'
-  compile 'org.apache.commons:commons-csv'
-  compile 'com.google.protobuf:protobuf-java'
-  compile 'com.squareup.okhttp3:okhttp'
-  compile 'com.fasterxml.staxmate:staxmate'
-  compile 'org.eclipse.jgit:org.eclipse.jgit'
-  compile 'org.tmatesoft.svnkit:svnkit'
-  compile 'org.picocontainer:picocontainer'
-  compile 'org.slf4j:jcl-over-slf4j'
-  compile 'org.slf4j:jul-to-slf4j'
-  compile 'org.slf4j:log4j-over-slf4j'
-  compile 'org.slf4j:slf4j-api'
-  compile 'org.sonarsource.update-center:sonar-update-center-common'
+  api 'ch.qos.logback:logback-classic'
+  api 'ch.qos.logback:logback-core'
+  implementation 'commons-codec:commons-codec'
+  api 'commons-io:commons-io'
+  implementation 'commons-lang:commons-lang'
+  implementation 'com.google.code.gson:gson'
+  implementation 'org.apache.commons:commons-csv' // not used
+  implementation 'com.google.protobuf:protobuf-java' // not used
+  implementation 'com.squareup.okhttp3:okhttp'
+  implementation 'com.fasterxml.staxmate:staxmate'
+  api 'org.eclipse.jgit:org.eclipse.jgit'
+  api 'org.tmatesoft.svnkit:svnkit'
+  api 'org.picocontainer:picocontainer'
+  runtimeOnly 'org.slf4j:jcl-over-slf4j'
+  runtimeOnly 'org.slf4j:jul-to-slf4j'
+  runtimeOnly 'org.slf4j:log4j-over-slf4j'
+  implementation 'org.slf4j:slf4j-api'
+  api 'org.sonarsource.update-center:sonar-update-center-common'
 
-  compile project(':sonar-core')
-  compile project(':sonar-scanner-protocol')
-  compile project(':sonar-ws')
-  compile project(':sonar-duplications')
+  api project(':sonar-core')
+  api project(':sonar-scanner-protocol')
+  api project(':sonar-ws')
+  api project(':sonar-duplications')
 
-  compile project(':sonar-plugin-api-impl')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
+  implementation project(':sonar-plugin-api-impl')
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
 
   compileOnly 'com.google.code.findbugs:jsr305'
 

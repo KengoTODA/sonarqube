@@ -1,3 +1,7 @@
+plugins {
+  id 'java-library'
+}
+
 sonarqube {
   properties {
     property 'sonar.projectName', "${projectTitle} :: DAO"
@@ -7,17 +11,17 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile 'com.google.protobuf:protobuf-java'
-  compile 'commons-io:commons-io'
-  compile 'commons-lang:commons-lang'
-  compile 'net.jpountz.lz4:lz4'
-  compile 'org.mybatis:mybatis'
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
+  implementation 'com.google.guava:guava'
+  api 'com.google.protobuf:protobuf-java'
+  implementation 'commons-io:commons-io'
+  implementation 'commons-lang:commons-lang'
+  implementation 'net.jpountz.lz4:lz4'
+  api 'org.mybatis:mybatis'
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
 
-  compile project(':server:sonar-db-core')
-  compile project(':server:sonar-db-migration')
-  compile project(':sonar-core')
+  api project(':server:sonar-db-core')
+  api project(':server:sonar-db-migration')
+  api project(':sonar-core')
 
   compileOnly 'com.google.code.findbugs:jsr305'
 

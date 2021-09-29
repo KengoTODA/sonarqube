@@ -1,3 +1,7 @@
+plugins {
+  id 'java-library'
+}
+
 description = 'Compute Engine JVM application'
 
 sonarqube {
@@ -8,24 +12,24 @@ sonarqube {
 
 dependencies {
   // please keep the list grouped by configuration and ordered by name
-  compile 'com.google.guava:guava'
-  compile 'com.google.protobuf:protobuf-java'
-  compile 'com.hazelcast:hazelcast'
-  compile 'com.hazelcast:hazelcast-kubernetes'
-  compile 'commons-io:commons-io'
-  compile 'org.apache.commons:commons-dbcp2'
-  compile 'org.nanohttpd:nanohttpd'
-  compile 'org.picocontainer:picocontainer'
-  compile project(':server:sonar-ce-common')
-  compile project(':server:sonar-ce-task')
-  compile project(':server:sonar-ce-task-projectanalysis')
-  compile project(':server:sonar-process')
-  compile project(':server:sonar-ce-task')
-  compile project(':server:sonar-server-common')
-  compile project(':sonar-core')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-  compile project(':sonar-plugin-api-impl')
-  compile project(':sonar-ws')
+  implementation 'com.google.guava:guava'
+  implementation 'com.google.protobuf:protobuf-java'
+  implementation 'com.hazelcast:hazelcast'
+  implementation 'com.hazelcast:hazelcast-kubernetes'
+  implementation 'commons-io:commons-io'
+  implementation 'org.apache.commons:commons-dbcp2'
+  api 'org.nanohttpd:nanohttpd'
+  api 'org.picocontainer:picocontainer'
+  implementation project(':server:sonar-ce-common') // not used
+  implementation project(':server:sonar-ce-task') // not used
+  implementation project(':server:sonar-ce-task-projectanalysis')
+  api project(':server:sonar-process')
+  api project(':server:sonar-ce-task')
+  implementation project(':server:sonar-server-common') // not used
+  implementation project(':sonar-core') // not used
+  implementation project(path: ':sonar-plugin-api', configuration: 'shadow') // not used
+  implementation project(':sonar-plugin-api-impl') // not used
+  implementation project(':sonar-ws')
   
   compileOnly 'com.google.code.findbugs:jsr305'
 

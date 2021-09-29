@@ -18,6 +18,7 @@ dependencies {
   implementation 'net.jpountz.lz4:lz4'
   api 'org.mybatis:mybatis'
   api project(path: ':sonar-plugin-api', configuration: 'shadow')
+  api project(':sonar-plugin-api-impl')
 
   api project(':server:sonar-db-core')
   api project(':server:sonar-db-migration')
@@ -45,7 +46,9 @@ dependencies {
 
   testFixturesApi testFixtures(project(':server:sonar-db-core'))
 
+  testFixturesImplementation 'commons-io:commons-io'
   testFixturesImplementation 'com.h2database:h2'
+  testFixturesImplementation 'commons-codec:commons-codec'
 
   testFixturesCompileOnly 'com.google.code.findbugs:jsr305'
 }

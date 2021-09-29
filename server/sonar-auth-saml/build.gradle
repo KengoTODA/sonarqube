@@ -24,6 +24,7 @@ dependencies {
     compileOnly project(':server:sonar-db-dao')
     compileOnly project(':sonar-core')
 
+    testImplementation 'commons-io:commons-io'
     testImplementation 'com.tngtech.java:junit-dataprovider'
     testImplementation 'junit:junit'
     testImplementation 'org.assertj:assertj-core'

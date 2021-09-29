@@ -44,6 +44,9 @@ dependencies {
   testFixturesApi 'junit:junit'
   testFixturesApi 'org.assertj:assertj-core'
   testFixturesImplementation 'org.mybatis:mybatis'
+  testFixturesImplementation 'commons-codec:commons-codec'
+  testFixturesImplementation 'commons-io:commons-io'
+  testFixturesImplementation project(':sonar-plugin-api-impl')
 
   testFixturesCompileOnly 'com.google.code.findbugs:jsr305'
 }

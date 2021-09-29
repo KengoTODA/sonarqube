@@ -29,6 +29,7 @@ dependencies {
 
   api project(':server:sonar-process')
   api project(':sonar-core')
+  implementation project(':sonar-plugin-api-impl')
 
   compileOnly 'com.google.code.findbugs:jsr305'
 

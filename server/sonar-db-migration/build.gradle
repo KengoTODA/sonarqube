@@ -13,6 +13,7 @@ dependencies {
 
   implementation 'com.google.guava:guava'
   implementation 'commons-lang:commons-lang'
+  implementation 'commons-io:commons-io'
   implementation 'commons-codec:commons-codec' // not used
   implementation 'com.fasterxml.staxmate:staxmate'
   api 'org.picocontainer:picocontainer'
@@ -35,6 +36,7 @@ dependencies {
   testImplementation 'org.xmlunit:xmlunit-matchers'
   testImplementation project(':sonar-scanner-protocol')
   testImplementation project(':sonar-testing-harness')
+  testImplementation project(':sonar-plugin-api-impl')
   testImplementation testFixtures(project(':server:sonar-db-core'))
 
   testRuntimeOnly 'com.h2database:h2'

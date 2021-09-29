@@ -9,6 +9,7 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
+  implementation 'commons-io:commons-io'
   compile 'com.google.guava:guava'
   compile project(':sonar-core')
   compile project(':server:sonar-webserver-api')
@@ -26,6 +27,7 @@ dependencies {
   testImplementation 'org.mockito:mockito-core'
 
   testFixturesApi project(':sonar-testing-harness')
+  testFixturesImplementation 'commons-io:commons-io'
 
   testFixturesCompileOnly 'com.google.code.findbugs:jsr305'
 }

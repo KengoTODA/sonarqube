@@ -14,6 +14,7 @@ dependencies {
 
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'
+  implementation project(':sonar-ws')
 
   testImplementation 'org.apache.logging.log4j:log4j-api'
   testImplementation 'org.apache.logging.log4j:log4j-core'

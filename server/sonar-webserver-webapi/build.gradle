@@ -9,6 +9,7 @@ dependencies {
 
   compile 'com.google.guava:guava'
   compile 'com.github.everit-org.json-schema:org.everit.json.schema'
+  implementation 'org.apache.commons:commons-email'
   implementation 'com.fasterxml.staxmate:staxmate'
   compile project(':server:sonar-ce-common')
   compile project(':server:sonar-ce-task')
@@ -19,6 +20,7 @@ dependencies {
   compile project(':server:sonar-webserver-ws')
   compile project(':server:sonar-alm-client')
   compile project(':sonar-scanner-protocol')
+  implementation project(':sonar-markdown')
 
 
   compileOnly 'com.google.code.findbugs:jsr305'

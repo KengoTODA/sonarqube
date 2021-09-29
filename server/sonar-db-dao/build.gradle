@@ -32,6 +32,7 @@ dependencies {
   testImplementation 'org.assertj:assertj-guava'
   testImplementation 'org.mockito:mockito-core'
   testImplementation 'org.sonarsource.orchestrator:sonar-orchestrator'
+  testImplementation 'com.googlecode.json-simple:json-simple'
   testImplementation project(':sonar-testing-harness')
   testImplementation project(':sonar-plugin-api-impl')
 

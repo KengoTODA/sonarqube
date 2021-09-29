@@ -11,11 +11,11 @@ configureCompileJavaToVersion 8
 dependencies {
   // please keep list ordered
 
-  compile 'com.google.code.gson:gson'
-  compile 'com.googlecode.json-simple:json-simple'
+  implementation 'com.google.code.gson:gson'
+  implementation 'com.googlecode.json-simple:json-simple'
   api 'com.sun.mail:javax.mail'
-  compile 'commons-io:commons-io'
-  compile 'junit:junit'
+  implementation 'commons-io:commons-io'
+  api 'junit:junit'
   api 'org.assertj:assertj-core'
   api 'org.hamcrest:hamcrest-core'
   api 'org.jsoup:jsoup'

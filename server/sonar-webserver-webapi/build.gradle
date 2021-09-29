@@ -9,6 +9,7 @@ dependencies {
 
   compile 'com.google.guava:guava'
   compile 'com.github.everit-org.json-schema:org.everit.json.schema'
+  implementation 'com.fasterxml.staxmate:staxmate'
   compile project(':server:sonar-ce-common')
   compile project(':server:sonar-ce-task')
   compile project(':server:sonar-db-dao')

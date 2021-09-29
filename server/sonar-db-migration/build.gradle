@@ -1,3 +1,7 @@
+plugins {
+  id 'java-library'
+}
+
 sonarqube {
   properties {
     property 'sonar.projectName', "${projectTitle} :: Database Migration"
@@ -7,15 +11,15 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile 'commons-lang:commons-lang'
-  compile 'commons-codec:commons-codec'
-  compile 'com.fasterxml.staxmate:staxmate'
-  compile 'org.picocontainer:picocontainer'
+  implementation 'com.google.guava:guava'
+  implementation 'commons-lang:commons-lang'
+  implementation 'commons-codec:commons-codec' // not used
+  implementation 'com.fasterxml.staxmate:staxmate'
+  api 'org.picocontainer:picocontainer'
 
-  compile project(':server:sonar-db-core')
-  compile project(':server:sonar-process')
-  compile project(':sonar-core')
+  api project(':server:sonar-db-core')
+  implementation project(':server:sonar-process')
+  api project(':sonar-core')
 
   compileOnly 'com.google.code.findbugs:jsr305'
 

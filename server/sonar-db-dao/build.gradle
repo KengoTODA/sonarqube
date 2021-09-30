@@ -64,7 +64,7 @@ task dumpSchema(type:JavaExec) {
 tasks.check.dependsOn dumpSchema
 
 task createDB(type:JavaExec) {
-    main = 'org.sonar.db.createdb.CreateDb'
+    mainClass.set 'org.sonar.db.createdb.CreateDb'
     classpath = sourceSets.test.runtimeClasspath
     systemProperty 'orchestrator.configUrl', System.getProperty('orchestrator.configUrl')
     if (!project.version.endsWith("-SNAPSHOT")) {

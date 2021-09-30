@@ -54,15 +54,13 @@ processResources {
 
 shadowJar {
   configurations = [project.configurations.runtimeClasspath]
-  minimize {
-    exclude(project(':sonar-check-api'))
-  }
+// the following feature does not work with ShadowJar 6.0.0+
+//   minimize {
+//     exclude(project(':sonar-check-api'))
+//   }
   relocate('com.google', 'org.sonar.api.internal.google')
   relocate('org.apache.commons', 'org.sonar.api.internal.apachecommons')
 }
-
-// not supported
-// tasks.shadowJar.dependsOn.remove('testClasses')
 
 // only interested in shadowJar
 jar.enabled = false

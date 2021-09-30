@@ -33,10 +33,9 @@ dependencies {
   testImplementation project(':sonar-plugin-api-impl')
 }
 
-sourceSets {
+configurations {
   // Make the compileOnly dependencies available when compiling/running tests
-  test.compileClasspath += configurations.compileClasspath + configurations.shadow
-  test.runtimeClasspath += configurations.compileClasspath + configurations.shadow
+  testImplementation.extendsFrom configurations.compileClasspath
 }
 
 def on3Digits(version) {
@@ -54,13 +53,16 @@ processResources {
 }
 
 shadowJar {
-  configurations = [project.configurations.compileClasspath]
+  configurations = [project.configurations.runtimeClasspath]
   minimize {
     exclude(project(':sonar-check-api'))
   }
   relocate('com.google', 'org.sonar.api.internal.google')
   relocate('org.apache.commons', 'org.sonar.api.internal.apachecommons')
 }
+
+// not supported
+// tasks.shadowJar.dependsOn.remove('testClasses')
 
 // only interested in shadowJar
 jar.enabled = false

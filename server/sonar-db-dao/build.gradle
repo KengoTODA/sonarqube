@@ -58,7 +58,7 @@ test {
 }
 
 task dumpSchema(type:JavaExec) {
-    main = 'org.sonar.db.dump.DumpSQSchema'
+    mainClass.set 'org.sonar.db.dump.DumpSQSchema'
     classpath = sourceSets.test.runtimeClasspath
 }
 tasks.check.dependsOn dumpSchema

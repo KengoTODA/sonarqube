@@ -9,18 +9,18 @@ sonarqube {
 dependencies {
   // please keep the list grouped by configuration and ordered by name
 
-  compile 'com.google.guava:guava'
-  compile 'org.apache.tomcat.embed:tomcat-embed-core'
+  implementation 'com.google.guava:guava' // not used
+  implementation 'org.apache.tomcat.embed:tomcat-embed-core'
   implementation 'ch.qos.logback:logback-access'
-  compile project(':sonar-core')
-  compile project(':server:sonar-auth-github')
-  compile project(':server:sonar-auth-gitlab')
-  compile project(':server:sonar-auth-ldap')
-  compile project(':server:sonar-auth-saml')
-  compile project(':server:sonar-ce-task-projectanalysis')
-  compile project(':server:sonar-process')
-  compile project(':server:sonar-webserver-core')
-  compile project(':server:sonar-webserver-webapi')
+  implementation project(':sonar-core') // not used
+  implementation project(':server:sonar-auth-github')
+  implementation project(':server:sonar-auth-gitlab')
+  implementation project(':server:sonar-auth-ldap')
+  implementation project(':server:sonar-auth-saml')
+  implementation project(':server:sonar-ce-task-projectanalysis')
+  implementation project(':server:sonar-process')
+  implementation project(':server:sonar-webserver-core')
+  implementation project(':server:sonar-webserver-webapi')
   implementation project(':sonar-ws')
 
   compileOnly 'com.google.code.findbugs:jsr305'

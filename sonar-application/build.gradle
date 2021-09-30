@@ -43,16 +43,16 @@ shadowJar {
 
 dependencies {
     // please keep list ordered
-    compile 'org.slf4j:slf4j-api'
+    implementation 'org.slf4j:slf4j-api'
 
-    compile 'org.elasticsearch.client:elasticsearch-rest-high-level-client'
-    compile project(':server:sonar-ce')
-    compile project(':server:sonar-main')
-    compile project(':server:sonar-process')
-    compile project(':server:sonar-webserver')
-    compile project(':sonar-core')
-    compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-    compile project(':sonar-plugin-api-impl')
+    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client'
+    implementation project(':server:sonar-ce')
+    implementation project(':server:sonar-main')
+    implementation project(':server:sonar-process')
+    implementation project(':server:sonar-webserver')
+    implementation project(':sonar-core')
+    implementation project(path: ':sonar-plugin-api', configuration: 'shadow')
+    implementation project(':sonar-plugin-api-impl')
 
     compileOnly 'com.google.code.findbugs:jsr305'
 

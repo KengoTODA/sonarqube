@@ -1,7 +1,8 @@
 on:
   push:
-    branch:
+    branches:
       - master
+      - build-enhancement
   workflow_dispatch:
 
 jobs:
@@ -17,4 +18,4 @@ jobs:
           java-version: 11
           distribution: temurin
       - run: |
-          ./gradlew build --no-daemon --scan
+          ./gradlew build --no-daemon --scan --parallel -P parallelTests=true

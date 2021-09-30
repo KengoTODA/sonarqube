@@ -1,3 +1,7 @@
+plugins {
+  id 'java-library'
+}
+
 description = 'WebServer "API" to write Web Services'
 
 sonarqube {
@@ -10,12 +14,12 @@ dependencies {
   // please keep the list grouped by configuration and ordered by name
 
   implementation 'commons-io:commons-io'
-  compile 'com.google.guava:guava'
-  compile project(':sonar-core')
-  compile project(':server:sonar-webserver-api')
-  compile project(path: ':sonar-plugin-api', configuration: 'shadow')
-  compile project(':sonar-plugin-api-impl')
-  compile project(':sonar-ws')
+  implementation 'com.google.guava:guava'
+  implementation project(':sonar-core') // not used
+  implementation project(':server:sonar-webserver-api')
+  api project(path: ':sonar-plugin-api', configuration: 'shadow')
+  implementation project(':sonar-plugin-api-impl')
+  implementation project(':sonar-ws')
 
   compileOnly 'com.google.code.findbugs:jsr305'
   compileOnly 'javax.servlet:javax.servlet-api'
@@ -26,8 +30,12 @@ dependencies {
   testImplementation 'org.apache.tomcat.embed:tomcat-embed-core'
   testImplementation 'org.mockito:mockito-core'
 
+  testFixturesApi 'com.google.protobuf:protobuf-java'
   testFixturesApi project(':sonar-testing-harness')
+  testFixturesApi project(':sonar-plugin-api-impl')
   testFixturesImplementation 'commons-io:commons-io'
+  testFixturesImplementation 'com.google.guava:guava'
+  testFixturesImplementation project(':sonar-ws')
 
   testFixturesCompileOnly 'com.google.code.findbugs:jsr305'
 }

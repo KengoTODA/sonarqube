@@ -22,6 +22,7 @@ dependencies {
   api project(':server:sonar-webserver-ws')
   api project(':server:sonar-alm-client')
   api project(':sonar-scanner-protocol')
+  implementation project(':sonar-ws')
   implementation project(':sonar-markdown')
 
 

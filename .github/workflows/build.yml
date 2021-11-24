@@ -18,4 +18,4 @@ jobs:
           java-version: 11
           distribution: temurin
       - run: |
-          ./gradlew build --no-daemon --scan --parallel --max-workers=4 -P parallelTests=true
+          ./gradlew build --no-daemon --scan --parallel --max-workers=4 -P parallelTests=true -Dscan.tag.devprod-engineer
